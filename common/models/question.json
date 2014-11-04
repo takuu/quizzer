@@ -1,0 +1,33 @@
+{
+  "name": "question",
+  "plural": "questions",
+  "base": "PersistedModel",
+  "properties": {
+    "question_text": {
+      "type": "string",
+      "required": true
+    },
+    "choices": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "answer": {
+      "type": [
+        "number"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "quiz": {
+      "type": "belongsTo",
+      "model": "quiz",
+      "foreignKey": "quiz_id"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

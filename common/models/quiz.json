@@ -1,0 +1,28 @@
+{
+  "name": "quiz",
+  "plural": "quizes",
+  "base": "PersistedModel",
+  "properties": {
+    "quiz_name": {
+      "type": "string",
+      "required": true
+    },
+    "quiz_type": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "questions": {
+      "type": "hasMany",
+      "model": "question",
+      "foreignKey": "quiz_id"
+    }
+  },
+  "acls": [],
+  "methods": []
+}
